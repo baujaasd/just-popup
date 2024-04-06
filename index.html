@@ -1,21 +1,346 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>popup</title>
+  <title>Document</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="popup.js"></script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 3rem;
+      box-sizing: border-box;
+      background-color: beige;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    button {
+      padding: 2rem;
+      text-align: center;
+      width: max-content;
+    }
+
+    .padding {
+      padding: 2rem;
+    }
+  </style>
 </head>
-<style>
-  html,
-  body,
-  body * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-</style>
+
 <body>
-  
+  <!-- default -->
+  <button data-popup="popup" type="button" title="default">default</button>
+
+  <dialog id="popup" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+    <div class="popup">
+      <button class="close_popup" type="button" title="Закрыть"></button>
+      <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem voluptatem
+        nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+        corporis aliquam, pariatur recusandae!</p>
+    </div>
+  </dialog>
+
+  <!-- top -->
+  <button data-popup="top" type="button" title="top">top</button>
+
+  <dialog id="top" class="popup_wrapper top" aria-label="Диалоговое окно" aria-hidden="true">
+    <div class="popup">
+      <button class="close_popup" type="button" title="Закрыть"></button>
+      <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem voluptatem
+        nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+        corporis aliquam, pariatur recusandae!</p>
+    </div>
+  </dialog>
+
+  <!-- left -->
+  <button data-popup="left" type="button" title="left">left</button>
+
+  <dialog id="left" class="popup_wrapper left" aria-label="Диалоговое окно" aria-hidden="true">
+    <div class="popup">
+      <button class="close_popup" type="button" title="Закрыть"></button>
+      <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem voluptatem
+        nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+        corporis aliquam, pariatur recusandae!</p>
+    </div>
+  </dialog>
+
+  <!-- right -->
+  <button data-popup="right" type="button" title="right">right</button>
+
+  <dialog id="right" class="popup_wrapper right" aria-label="Диалоговое окно" aria-hidden="true">
+    <div class="popup">
+      <button class="close_popup" type="button" title="Закрыть"></button>
+      <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem voluptatem
+        nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+        corporis aliquam, pariatur recusandae!</p>
+    </div>
+  </dialog>
+
+  <!-- bottom -->
+  <button data-popup="bottom" type="button" title="bottom">bottom</button>
+
+  <dialog id="bottom" class="popup_wrapper bottom" aria-label="Диалоговое окно" aria-hidden="true">
+    <div class="popup">
+      <button class="close_popup" type="button" title="Закрыть"></button>
+      <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem voluptatem
+        nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+        corporis aliquam, pariatur recusandae!</p>
+      </a /dialogiv>
+    </div>
+  </dialog>
+
+  <!-- full-width -->
+  <button data-popup="full-width" type="button" title="full-width">full-width</button>
+
+  <dialog id="full-width" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+    <div class="popup full_width">
+      <button class="close_popup" type="button" title="Закрыть"></button>
+      <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+        voluptatem
+        nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+        corporis aliquam, pariatur recusandae!</p>
+    </div>
+  </dialog>
+
+  <!-- full-height -->
+  <button data-popup="full-height" type="button" title="full-height">full-height</button>
+
+  <dialog id="full-height" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+    <div class="popup full_height">
+      <button class="close_popup" type="button" title="Закрыть"></button>
+      <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+        voluptatem
+        nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+        corporis aliquam, pariatur recusandae!</p>
+    </div>
+  </dialog>
+
+  <!-- fullscreen -->
+  <button data-popup="fullscreen" type="button" title="fullscreen">fullscreen</button>
+
+  <dialog id="fullscreen" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+    <div class="popup fullscreen">
+      <button class="close_popup" type="button" title="Закрыть"></button>
+      <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+        voluptatem
+        nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+        corporis aliquam, pariatur recusandae!</p>
+    </div>
+  </dialog>
+
+  <!-- xxl -->
+  <button data-popup="xxl" type="button" title="xxl">xxl</button>
+
+  <dialog id="xxl" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+    <div class="popup xxl">
+      <button class="close_popup" type="button" title="Закрыть"></button>
+      <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+        voluptatem
+        nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+        corporis aliquam, pariatur recusandae!</p>
+    </div>
+  </dialog>
+
+  <!-- xl -->
+  <button data-popup="xl" type="button" title="xl">xl</button>
+
+  <dialog id="xl" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+    <div class="popup xl">
+      <button class="close_popup" type="button" title="Закрыть"></button>
+      <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+        voluptatem
+        nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+        corporis aliquam, pariatur recusandae!</p>
+    </div>
+  </dialog>
+
+  <!-- lg -->
+  <button data-popup="lg" type="button" title="lg">lg</button>
+
+  <dialog id="lg" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+    <div class="popup lg">
+      <button class="close_popup" type="button" title="Закрыть"></button>
+      <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+        voluptatem
+        nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+        corporis aliquam, pariatur recusandae!</p>
+    </div>
+  </dialog>
+
+  <!-- md -->
+  <button data-popup="md" type="button" title="md">md</button>
+
+  <dialog id="md" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+    <div class="popup md">
+      <button class="close_popup" type="button" title="Закрыть"></button>
+      <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+        voluptatem
+        nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+        corporis aliquam, pariatur recusandae!</p>
+    </div>
+  </dialog>
+
+  <!-- sm -->
+  <button data-popup="sm" type="button" title="sm">sm</button>
+
+  <dialog id="sm" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+    <div class="popup sm">
+      <button class="close_popup" type="button" title="Закрыть"></button>
+      <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+        voluptatem
+        nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+        corporis aliquam, pariatur recusandae!</p>
+    </div>
+  </dialog>
+
+  <!-- xs -->
+  <button data-popup="xs" type="button" title="xs">xs</button>
+
+  <dialog id="xs" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+    <div class="popup xs">
+      <button class="close_popup" type="button" title="Закрыть"></button>
+      <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+        voluptatem
+        nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+        corporis aliquam, pariatur recusandae!</p>
+    </div>
+  </dialog>
+
+  <!-- 2 in 1 -->
+  <button data-popup="db" type="button" title="2 in 1">2 in 1</button>
+
+  <dialog id="db" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+    <div class="popup">
+      <button class="close_popup" type="button" title="Закрыть"></button>
+      <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+        voluptatem
+        nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+        corporis aliquam, pariatur recusandae!</p>
+      <button data-popup="xs" type="button" title="xs">xs</button>
+      </a /dialogiv>
+    </div>
+  </dialog>
+
+    <!-- scale -->
+    <button data-popup="scale" type="button" title="scale">scale</button>
+
+    <dialog id="scale" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+      <div class="popup scale">
+        <button class="close_popup" type="button" title="Закрыть"></button>
+        <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+          voluptatem
+          nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+          corporis aliquam, pariatur recusandae!</p>
+      </div>
+    </dialog>
+
+    <!-- fadeInLeft -->
+    <button data-popup="fadeInLeft" type="button" title="fadeInLeft">fadeInLeft</button>
+
+    <dialog id="fadeInLeft" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+      <div class="popup fadeInLeft">
+        <button class="close_popup" type="button" title="Закрыть"></button>
+        <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+          voluptatem
+          nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+          corporis aliquam, pariatur recusandae!</p>
+      </div>
+    </dialog>
+
+    <!-- fadeInRight -->
+    <button data-popup="fadeInRight" type="button" title="fadeInRight">fadeInRight</button>
+
+    <dialog id="fadeInRight" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+      <div class="popup fadeInRight">
+        <button class="close_popup" type="button" title="Закрыть"></button>
+        <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+          voluptatem
+          nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+          corporis aliquam, pariatur recusandae!</p>
+      </div>
+    </dialog>
+
+    <!-- fadeInTop -->
+    <button data-popup="fadeInTop" type="button" title="fadeInTop">fadeInTop</button>
+
+    <dialog id="fadeInTop" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+      <div class="popup fadeInTop">
+        <button class="close_popup" type="button" title="Закрыть"></button>
+        <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+          voluptatem
+          nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+          corporis aliquam, pariatur recusandae!</p>
+      </div>
+    </dialog>
+
+    <!-- shake -->
+    <button data-popup="shake" type="button" title="shake">shake</button>
+
+    <dialog id="shake" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+      <div class="popup shake">
+        <button class="close_popup" type="button" title="Закрыть"></button>
+        <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+          voluptatem
+          nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+          corporis aliquam, pariatur recusandae!</p>
+      </div>
+    </dialog>
+
+    <!-- shakeX -->
+    <button data-popup="shakeX" type="button" title="shakeX">shakeX</button>
+
+    <dialog id="shakeX" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+      <div class="popup shakeX">
+        <button class="close_popup" type="button" title="Закрыть"></button>
+        <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+          voluptatem
+          nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+          corporis aliquam, pariatur recusandae!</p>
+      </div>
+    </dialog>
+
+    <!-- shakeY -->
+    <button data-popup="shakeY" type="button" title="shakeY">shakeY</button>
+
+    <dialog id="shakeY" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+      <div class="popup shakeY">
+        <button class="close_popup" type="button" title="Закрыть"></button>
+        <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+          voluptatem
+          nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+          corporis aliquam, pariatur recusandae!</p>
+      </div>
+    </dialog>
+
+    <!-- bounce -->
+    <button data-popup="bounce" type="button" title="bounce">bounce</button>
+
+    <dialog id="bounce" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+      <div class="popup bounce">
+        <button class="close_popup" type="button" title="Закрыть"></button>
+        <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+          voluptatem
+          nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+          corporis aliquam, pariatur recusandae!</p>
+      </div>
+    </dialog>
+
+    <!-- bounce2 -->
+    <button data-popup="bounce2" type="button" title="bounce2">bounce2</button>
+
+    <dialog id="bounce2" class="popup_wrapper" aria-label="Диалоговое окно" aria-hidden="true">
+      <div class="popup bounce2">
+        <button class="close_popup" type="button" title="Закрыть"></button>
+        <p class="padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas, exercitationem
+          voluptatem
+          nihil ratione magni provident sequi ipsam velit magnam voluptatibus minima totam, voluptas placeat excepturi
+          corporis aliquam, pariatur recusandae!</p>
+      </div>
+    </dialog>
 </body>
+
 </html>
